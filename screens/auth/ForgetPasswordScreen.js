@@ -19,6 +19,8 @@ export default class ForgetPasswordscreen extends React.Component{
 
     }
     onResetpasswordPress = () =>{
+        this.setState({loading:true});
+        setTimeout(() => {this.setState({loading:false})},2000);
 firebase.auth().sendPasswordResetEmail(this.state.email).then(() =>
 {this.setState({errormessage:'password reset email has been sent'})
 // Alert.alert('password reset email has been sent.')

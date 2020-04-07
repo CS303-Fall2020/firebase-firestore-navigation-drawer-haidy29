@@ -14,7 +14,7 @@ export default class LoginSceen extends React.Component{
     }
     onLoginPress = () =>{
         this.setState({loading:true});
-        setTimeout(() => {this.setState({loading:false}),2000});
+        setTimeout(() => {this.setState({loading:false})},2000);
         firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then(() =>{
         //      this.setState({loading:true});
         // setTimeout(() => {this.setState({loading:false}),1000});

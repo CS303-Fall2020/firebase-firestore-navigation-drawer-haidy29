@@ -22,7 +22,8 @@ export default class SignupScreen extends React.Component {
     };
   }
   onSignupPress = () => {
-    
+    this.setState({loading:true});
+    setTimeout(() => {this.setState({loading:false})},2000);
     if (this.state.password !== this.state.passwordconfirm) {
       Alert.alert('password do not match');
       return;
